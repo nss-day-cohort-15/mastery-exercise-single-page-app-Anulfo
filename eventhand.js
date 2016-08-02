@@ -11,5 +11,8 @@ var globalGo = function() {
 function handleModifiableCLick(mouseEvent) {
     var elementClicked = event.target.innerHTML;
     console.log ("Element Clicked on", elementClicked);
+    document.getElementById("carSpecToChange").focus();
     
+
 }
+
