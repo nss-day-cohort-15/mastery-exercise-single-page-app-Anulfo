@@ -3,12 +3,13 @@ var globalGo = function() {
         console.log(listenArea.length);
         for(var i = 0; i < listenArea.length; i++) {
                 listenArea.item(i).addEventListener ("click", function () {
-                    console.log("clicked");
+                    handleModifiableCLick();
                 });
             }
 }
 
 function handleModifiableCLick(mouseEvent) {
-    var elementClicked = MouseEvent.target.innerHTML;
+    var elementClicked = event.target.innerHTML;
     console.log ("Element Clicked on", elementClicked);
+    
 }
