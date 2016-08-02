@@ -1,0 +1,31 @@
+{
+  "carArray": [
+    {
+      "make": "Porsche",
+      "model": "Carrera GTs",
+      "year": "2004",
+      "price": "199,999",
+      "color": "Signal Yellow",
+      "purchased": false,
+      "description": "The Porsche Carrera GT (Project Code 980) is a mid-engined[4] sports car that was manufactured by Porsche between 2004–2007 in Leipzig,[5] Germany. Sports Car International named the Carrera GT number one on its list of Top Sports Cars of the 2000s, and number eight on Top Sports Cars of All Time list.Mileage: 150,000"
+    },
+    {
+      "make": "Lamborghini",
+      "model": "Huracan",
+      "year": "2015",
+      "price": "237,250",
+      "color": "Verde Mantis",
+      "purchased": false,
+      "description": "Nothing on Earth can prepare you for the eyeball-melting performance of Lamborghini’s “entry-level” supercar, the Huracán. The angular design is severe yet elegant; the stealth fighter–like cockpit is as luxurious as it is intense. Nestled behind the cockpit is a 5.2-liter V-10 with a seven-speed dual-clutch automatic (sorry, no manual transmission is offered); with rear-wheel drive, it makes 571 hp and with all-wheel drive it produces 602. A convertible version (Spyder) is also available. Mileage: Mileage: 36,000 miles."
+    },
+    {
+      "make": "Ferrari",
+      "model": "GTC4Lusso",
+      "year": "2016",
+      "price": "280,000",
+      "color": "Grigio Alloy",
+      "purchased": false,
+      "description": "The new Ferrari GTC4Lusso is Maranello's latest interpretation of the four-seater concept, which combines extraordinary performance in all driving conditions with sporty elegance and luxurious comfort for both driver and passengers alike. Mileage: 1,000 miles."
+    }
+  ]
+}
