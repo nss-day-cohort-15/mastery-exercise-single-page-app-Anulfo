@@ -1,0 +1,7 @@
+.carCard {
+    width: 25%;
+    height: 600px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 1em;
+}
