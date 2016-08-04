@@ -11,7 +11,7 @@ function displayOnScreen (carArrayParsed) {
         <p>${currentCar.price}</p>
         <p>${currentCar.color}</p>
         <p>${currentCar.purchased}<p>
-        <p  class="modifiable">${currentCar.description}<p>
+        <p class="modifiable">${currentCar.description}<p>
         </div>`
     }
         arrayToScreen.innerHTML = carDisplay;
