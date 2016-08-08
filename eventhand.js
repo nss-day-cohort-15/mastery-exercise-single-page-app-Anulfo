@@ -1,13 +1,20 @@
 var globalGo = function() {
-    var listenArea = document.getElementsByClassName("modifiable");
+    var inputField = document.getElementById("inputField");
+    var listenArea = document.getElementsByClassName("carCard");
         for(var i = 0; i < listenArea.length; i++) {
-                listenArea.item(i).addEventListener ("click", 
-                function (){
-                    console.log("Clicked");
-                    handleModifiableCLick();
-                })
+            var currentCard = listenArea[i];
+            currentCard.addEventListener ("click", 
+            function (evt){
+                currentCard = evt.currentTarget;
+                currentCard.addClassList
+                inputField.removeEventListener("keyup", mirrorText)
+                inputField.addEventListener("keyup", mirrorText)
+                console.log(currentCard);
+                inputField.value = "";
+                inputField.focus();
+                handleModifiableCLick();
+            })
         }
-    
 }
 
 function handleModifiableCLick() {
@@ -18,13 +25,11 @@ function handleModifiableCLick() {
 
 
 function mirrorText (elementClicked) {
-    console.log(elementClicked);
-    var inputField = document.getElementById("inputField");
-    var littleMirror = function (evt) {
-        elementClicked.innerHTML = inputField.value;
-    };
-    inputField.removeEventListener("keyup", littleMirror);
-    inputField.addEventListener("keyup", littleMirror);
+    var currentCar = document.querySelector('.selected')
+    var carDescription = currentCar.querySelector('.description')
+    var inputField = document.querySelector('#inputField');
+
+    carDescription.innerHTML = inputField.value; 
     doneButton()
 }
 

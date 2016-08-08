@@ -1,7 +1,11 @@
 .carCard {
     width: 25%;
     height: 600px;
-    border: 1px solid black;
+    border: 1px solid;
     float: left;
     margin-left: 1em;
+}
+
+.selected {
+    border: 5px solid;
 }
