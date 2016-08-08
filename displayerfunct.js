@@ -1,12 +1,12 @@
 var carArray = (function (displayer) {
 
-    displayer.displayOnScreen = function (carArrayParsed) {
+    displayer.displayOnScreen = function () {
         var carDisplay = [];
         var arrayToScreen = document.getElementById("carCards");
         var carArrayParsed = displayer.getInventory()
         for (var i = 0; i < carArrayParsed.length;i++){
         var currentCar = carArrayParsed[i]
-            carDisplay += `<div class="carCard" style="border-color:${currentCar.color}">
+            carDisplay += `<div class="col-md-3" style="border-color:${currentCar.color}">
             <h1>${currentCar.make}</h1>
             <h2>${currentCar.model}</h2>
             <h3>${currentCar.year}</h3>
@@ -20,7 +20,7 @@ var carArray = (function (displayer) {
             carArray.activateEvents()
     }
 
-    return displayer
+    return displayer;
 }(carArray))
 
 

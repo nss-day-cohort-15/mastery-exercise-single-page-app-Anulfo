@@ -19,7 +19,6 @@ var carArray = (function (activate) {
             button.addEventListener("click", function (evt) {
                 inputField.value = "";
                 inputField.blur();
-                console.log(evt.target);
                 eventRemover(listenArea)
                 // remove selected class
             })
@@ -49,17 +48,13 @@ var carArray = (function (activate) {
 
         function enterButton (evt) {
             var inputField = evt.target
-            //inputField.addEventListener("keyup", function (evt) {
-                // console.log(evt);
             if (evt.keyCode == 13 ) {
                 inputField.removeEventListener("keyup", mirrorText);  
                     inputField.value = "";
                     inputField.blur();
+                    eventRemover(listenArea); 
             }
-            //})
         }
-
-
     }
     return activate;
 }(carArray))
