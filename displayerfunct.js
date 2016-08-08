@@ -15,7 +15,7 @@ function displayOnScreen (carArrayParsed) {
         </div>`
     }
         arrayToScreen.innerHTML = carDisplay;
-        globalGo()
+        carArray.activateEvents()
 }
 
 

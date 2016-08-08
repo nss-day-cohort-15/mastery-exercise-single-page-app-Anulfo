@@ -10,6 +10,9 @@ var carArray = (function () {
                 callback(carArrayParsed)
             })
         xhr.send()
+        },
+        getInventory: function () {
+            return carArrayParsed;
         }
     }
 }())
