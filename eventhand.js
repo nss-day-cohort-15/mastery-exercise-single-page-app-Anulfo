@@ -16,18 +16,17 @@ var carArray = (function (activate) {
                 }
 
         function eventRemover (listenArea){
-            console.log(listenArea)
             for (var i = 0; i < listenArea.length; i++){
                 listenArea[i].classList.remove("selected");   
+            inputField.removeEventListener("keyup", mirrorText);
             }
         }
 
 
         function handleModifiableCLick(selectedCard) {
-            inputField.removeEventListener("keyup", mirrorText);
             selectedCard.classList.add("selected");
-            inputField.addEventListener("keyup", mirrorText);
-            mirrorText(event.target);
+            inputField.addEventListener("keyup", function (){mirrorText(selectedCard);
+            })
         }
 
 
