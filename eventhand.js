@@ -15,6 +15,15 @@ var carArray = (function (activate) {
                     })
                 }
 
+            var button = document.getElementById("doneButton");
+            button.addEventListener("click", function (evt) {
+                inputField.value = "";
+                inputField.blur();
+                console.log(evt.target);
+                eventRemover(listenArea)
+                // remove selected class
+            })
+
         function eventRemover (listenArea){
             for (var i = 0; i < listenArea.length; i++){
                 listenArea[i].classList.remove("selected");   
@@ -25,28 +34,34 @@ var carArray = (function (activate) {
 
         function handleModifiableCLick(selectedCard) {
             selectedCard.classList.add("selected");
-            inputField.addEventListener("keyup", function (){mirrorText(selectedCard);
-            })
+            inputField.addEventListener("keyup", mirrorText);
         }
 
 
-        function mirrorText (elementClicked) {
-            console.log(elementClicked);
+        function mirrorText (evt) {
+            // console.log(elementClicked);
             var currentCar = document.querySelector('.selected')
             var carDescription = currentCar.querySelector('.description')
-            var inputField = document.querySelector('#inputField');
-            carDescription.innerHTML = inputField.value; 
-            doneButton()
+            var inputField = evt.target;
+            carDescription.innerHTML = inputField.value;
+            enterButton(evt);
         }
 
-        function doneButton () {
-            var inputField = document.getElementById("inputField");
-            var button = document.getElementById("doneButton");
-            button.addEventListener("click", function () {
-                inputField.value = "";
-                inputField.blur();
-            })
+        function enterButton (evt) {
+            var inputField = evt.target
+            //inputField.addEventListener("keyup", function (evt) {
+                // console.log(evt);
+            if (evt.keyCode == 13 ) {
+                inputField.removeEventListener("keyup", mirrorText);  
+                    inputField.value = "";
+                    inputField.blur();
+            }
+            //})
         }
+
+
     }
     return activate;
 }(carArray))
+
+
