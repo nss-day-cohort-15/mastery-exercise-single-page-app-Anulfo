@@ -1,18 +1,19 @@
-.col-md-3 {
+.carCard {
     width: 25%;
-    height: 550px;
-    border: 1px solid;
+    background-color: #666699;
+    height: 600px;
+    border: 2px solid;
     float: left;
-    margin: 1em;
+    color: white;
+    margin: 1em auto 1em 5em;
 }
 
 .selected {
     border: 5px solid;
+    background-color: #3333cc;
 }
 
-.topSign {
-    background-color: lightgreen;
-    padding:1em auto 1em auto;
-    text-align: center;
-    color: purple;
+header {
+    background-color: darkblue;
+    color: white;
 }
