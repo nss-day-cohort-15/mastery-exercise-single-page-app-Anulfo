@@ -1,4 +1,4 @@
-var carArray = (function () {
+var carArray = (function (displayer) {
     var carArrayParsed = []
     return {
         getJson: function (callback) {
@@ -15,4 +15,5 @@ var carArray = (function () {
             return carArrayParsed;
         }
     }
-}())
+}(carArray || {}))
+

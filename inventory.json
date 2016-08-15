@@ -1,4 +1,4 @@
-{
+{  
   "carArray": [
     {
       "make": "Porsche",
@@ -20,6 +20,24 @@
     },
     {
       "make": "Ferrari",
+      "model": "GTC4Lusso",
+      "year": "2016",
+      "price": "280,000",
+      "color": "Blue",
+      "purchased": false,
+      "description": "The new Ferrari GTC4Lusso is Maranello's latest interpretation of the four-seater concept, which combines extraordinary performance in all driving conditions with sporty elegance and luxurious comfort for both driver and passengers alike. Mileage: 1,000 miles."
+    },
+    {
+      "make": "Filling Car 1",
+      "model": "Huracan",
+      "year": "2015",
+      "price": "237,250",
+      "color": "Green",
+      "purchased": false,
+      "description": "Nothing on Earth can prepare you for the eyeball-melting performance of Lamborghini’s “entry-level” supercar, the Huracán. The angular design is severe yet elegant; the stealth fighter–like cockpit is as luxurious as it is intense. Nestled behind the cockpit is a 5.2-liter V-10 with a seven-speed dual-clutch automatic (sorry, no manual transmission is offered); with rear-wheel drive, it makes 571 hp and with all-wheel drive it produces 602. A convertible version (Spyder) is also available. Mileage: Mileage: 36,000 miles."
+    },
+    {
+      "make": "Filling Car 2",
       "model": "GTC4Lusso",
       "year": "2016",
       "price": "280,000",
