@@ -1,0 +1,19 @@
+.carCard {
+    width: 25%;
+    background-color: #666699;
+    height: 600px;
+    border: 2px solid;
+    float: left;
+    color: white;
+    margin: 1em auto 1em 5em;
+}
+
+.selected {
+    border: 5px solid;
+    background-color: #3333cc;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+}
