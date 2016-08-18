@@ -1,3 +1,4 @@
+"use strict";
 var carArray = (function (activate) {
         activate.activateEvents = function () {
             var inputField = document.getElementById("inputField");

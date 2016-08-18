@@ -1,14 +1,15 @@
+"use strict";
 var carArray = (function (displayer) {
     displayer.displayOnScreen = function () {
         var carDisplay = [];
         var arrayToScreen = document.querySelector("#carCards");
         console.log(arrayToScreen);
-        var carArrayParsed = displayer.getInventory()
+        var carArrayParsed = displayer.getInventory();
         for (var i = 0; i < carArrayParsed.length;i++){
-            var currentCar = carArrayParsed[i]
+            var currentCar = carArrayParsed[i];
             if (i % 3 === 0){
                 console.log("open row");
-                carDisplay += `<div class = "row">`
+                carDisplay += `<div class = "row">`;
             };
 
             carDisplay += `<div class="carCard col-md-4" style="border-color:${currentCar.color}">
