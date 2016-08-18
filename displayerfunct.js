@@ -1,4 +1,4 @@
- var carArray = (function (displayer) {
+var carArray = (function (displayer) {
     displayer.displayOnScreen = function () {
         var carDisplay = [];
         var arrayToScreen = document.querySelector("#carCards");
