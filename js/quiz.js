@@ -1,20 +1,20 @@
 "use strict";
-var carArray = (function (displayer) {
-    var carArrayParsed = []
-    return {
-        getJson: function (callback) {
+    var carArrayParsed = [];
+
+    var getJson = function () {
+        return new Promise ( function (resolve, reject) {
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "inventory.json");
+            xhr.send();
             xhr.addEventListener("load", function(evt) {
-                console.log('loaded')
                 carArrayParsed = JSON.parse(this.responseText).carArray;
-                callback(carArrayParsed)
-            })
-        xhr.send()
-        },
-        getInventory: function () {
-            return carArrayParsed;
-        }
-    }
-}(carArray || {}))
+                resolve(carArrayParsed);
+            });
+        });
+    };
+
+  var getInventory = function () {
+        return carArrayParsed;
+    };
+module.exports = {getInventory, getJson};
 
