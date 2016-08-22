@@ -12,6 +12,6 @@
         };
        var getInventory = function () {
             return carArrayParsed;
-        }
+        };
 
     module.exports = {getJson, getInventory};

@@ -1,10 +1,10 @@
 "use strict";
 
 var inventory = require ("./quiz");
-var activate = require ("./eventhand")
-console.log(">>>?",inventory)
+var activate = require ("./eventhand");
+console.log(">>>?",inventory);
     var displayOnScreen = function (carArrayParsed) {
-        console.log(carArrayParsed)
+        console.log(carArrayParsed);
         var carDisplay = [];
         var arrayToScreen = document.querySelector("#carCards");
         console.log(arrayToScreen);
