@@ -1,6 +1,5 @@
 "use strict";
-var carArray = (function (activate) {
-        activate.activateEvents = function () {
+        var activateEvents = function () {
             var inputField = document.getElementById("inputField");
             var listenArea = document.getElementsByClassName("carCard");
                 for(var i = 0; i < listenArea.length; i++) {
@@ -16,13 +15,13 @@ var carArray = (function (activate) {
                     });
                 }
 
-            var button = document.getElementById("doneButton");
-            button.addEventListener("click", function (evt) {
-                inputField.value = "";
-                inputField.blur();
-                eventRemover(listenArea);
-                // remove selected class
-            });
+        var button = document.getElementById("doneButton");
+        button.addEventListener("click", function (evt) {
+            inputField.value = "";
+            inputField.blur();
+            eventRemover(listenArea);
+            // remove selected class
+        });
 
         function eventRemover (listenArea){
             for (var i = 0; i < listenArea.length; i++){
@@ -57,7 +56,5 @@ var carArray = (function (activate) {
             }
         }
     };
-    return activate;
-}(carArray));
 
-
+module.exports = activateEvents;

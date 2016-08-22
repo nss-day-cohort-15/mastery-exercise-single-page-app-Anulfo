@@ -1,10 +1,14 @@
 "use strict";
-var carArray = (function (displayer) {
-    displayer.displayOnScreen = function () {
+
+var inventory = require ("./quiz");
+var activate = require ("./eventhand");
+console.log(">>>?",inventory);
+    var displayOnScreen = function (carArrayParsed) {
+        console.log(carArrayParsed);
         var carDisplay = [];
         var arrayToScreen = document.querySelector("#carCards");
         console.log(arrayToScreen);
-        var carArrayParsed = displayer.getInventory();
+        // var carArrayParsed = inventory.getInventory();
         for (var i = 0; i < carArrayParsed.length;i++){
             var currentCar = carArrayParsed[i];
             if (i % 3 === 0){
@@ -28,11 +32,9 @@ var carArray = (function (displayer) {
             }
         }
         console.log(arrayToScreen);
-            arrayToScreen.innerHTML = carDisplay;
-            carArray.activateEvents();
+            arrayToScreen.innerHTML =carDisplay;
+            activate();
     };
-    return displayer;
   
-}(carArray));
 
-carArray.getJson(carArray.displayOnScreen); 
+inventory.getJson(displayOnScreen); 

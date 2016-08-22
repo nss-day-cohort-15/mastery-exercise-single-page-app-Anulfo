@@ -1,8 +1,13 @@
 "use strict";
+<<<<<<< HEAD
 var carArray = (function (displayer) {
     var carArrayParsed = [];
     return {
         getJson: function (callback) {
+=======
+    var carArrayParsed = [];
+        var getJson = function (callback) {
+>>>>>>> 7b7a34a98198b92dca0c07fc14364e6c7c56ffc0
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "inventory.json");
             xhr.addEventListener("load", function(evt) {
@@ -11,10 +16,8 @@ var carArray = (function (displayer) {
                 callback(carArrayParsed);
             });
         xhr.send();
-        },
-        getInventory: function () {
+        };
+       var getInventory = function () {
             return carArrayParsed;
-        }
-    };
-}(carArray || {}));
-
+        };
+module.exports = {getJson, getInventory};
