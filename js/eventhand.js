@@ -1,6 +1,5 @@
 "use strict";
-var carArray = (function (activate) {
-        activate.activateEvents = function () {
+        var activateEvents = function () {
             var inputField = document.getElementById("inputField");
             var listenArea = document.getElementsByClassName("carCard");
                 for(var i = 0; i < listenArea.length; i++) {
@@ -13,16 +12,16 @@ var carArray = (function (activate) {
                         inputField.focus();
                         eventRemover(listenArea);
                         handleModifiableCLick(selectedCard);
-                    })
+                    });
                 }
 
-            var button = document.getElementById("doneButton");
-            button.addEventListener("click", function (evt) {
-                inputField.value = "";
-                inputField.blur();
-                eventRemover(listenArea)
-                // remove selected class
-            })
+        var button = document.getElementById("doneButton");
+        button.addEventListener("click", function (evt) {
+            inputField.value = "";
+            inputField.blur();
+            eventRemover(listenArea);
+            // remove selected class
+        });
 
         function eventRemover (listenArea){
             for (var i = 0; i < listenArea.length; i++){
@@ -40,15 +39,15 @@ var carArray = (function (activate) {
 
         function mirrorText (evt) {
             // console.log(elementClicked);
-            var currentCar = document.querySelector('.selected')
-            var carDescription = currentCar.querySelector('.description')
+            var currentCar = document.querySelector('.selected');
+            var carDescription = currentCar.querySelector('.description');
             var inputField = evt.target;
             carDescription.innerHTML = inputField.value;
             enterButton(evt);
         }
 
         function enterButton (evt) {
-            var inputField = evt.target
+            var inputField = evt.target;
             if (evt.keyCode == 13 ) {
                 inputField.removeEventListener("keyup", mirrorText);  
                     inputField.value = "";
@@ -56,8 +55,6 @@ var carArray = (function (activate) {
                     eventRemover(listenArea); 
             }
         }
-    }
-    return activate;
-}(carArray))
+    };
 
-
+module.exports = activateEvents;
