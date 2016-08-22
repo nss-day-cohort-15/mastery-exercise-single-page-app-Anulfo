@@ -1,12 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 "use strict";
-<<<<<<< HEAD
-var carArray = (function (displayer) {
-    var carArrayParsed = [];
-    return {
-        getJson: function (callback) {
-=======
-
 var inventory = require ("./quiz");
 var activate = require ("./eventhand");
 console.log(">>>?",inventory);
@@ -112,7 +105,6 @@ module.exports = activateEvents;
 "use strict";
     var carArrayParsed = [];
         var getJson = function (callback) {
->>>>>>> 7b7a34a98198b92dca0c07fc14364e6c7c56ffc0
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "inventory.json");
             xhr.addEventListener("load", function(evt) {
@@ -121,20 +113,10 @@ module.exports = activateEvents;
                 callback(carArrayParsed);
             });
         xhr.send();
-<<<<<<< HEAD
-        },
-        getInventory: function () {
-            return carArrayParsed;
-        }
-    };
-}(carArray || {}));
-=======
         };
        var getInventory = function () {
             return carArrayParsed;
         };
->>>>>>> 7b7a34a98198b92dca0c07fc14364e6c7c56ffc0
-
     module.exports = {getJson, getInventory};
 
 },{}]},{},[1]);
